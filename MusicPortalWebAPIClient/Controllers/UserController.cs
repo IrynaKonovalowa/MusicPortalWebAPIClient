@@ -1,7 +1,8 @@
+using Castle.Components.DictionaryAdapter.Xml;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MusicPortalWebAPI.Models;
-using MusicPortalWebAPI.Repositories;
+using MusicPortalWebAPIClient.Models;
+using MusicPortalWebAPIClient.Repositories;
 
 namespace MusicPortalWebAPI.Controllers
 {
@@ -84,6 +85,14 @@ namespace MusicPortalWebAPI.Controllers
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
+            }
+
+            foreach (var us in await repo.GetAll())
+            {
+                if (us.Email == u.Email)
+                {                    
+                    return Ok("no");
+                }
             }
             User user = new User();
             user.FirstName = u.FirstName;

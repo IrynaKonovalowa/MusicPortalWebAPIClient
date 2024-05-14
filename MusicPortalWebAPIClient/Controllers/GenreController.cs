@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MusicPortalWebAPI.Models;
-using MusicPortalWebAPI.Repositories;
+using MusicPortalWebAPIClient.Models;
+using MusicPortalWebAPIClient.Repositories;
 
-namespace MusicPortalWebAPI.Controllers
+namespace MusicPortalWebAPIClient.Controllers
 {
     [ApiController]
     [Route("api/Genres")]
@@ -33,7 +33,7 @@ namespace MusicPortalWebAPI.Controllers
 
         // GET: api/Genres/id
         [HttpGet("{id}")]
-        public async Task<ActionResult<Genre>> GetGenre(int id)
+        public async Task<ActionResult<GenreViewModel>> GetGenre(int id)
         {
             var genre = await repo.Get(id);
             if (genre == null)
