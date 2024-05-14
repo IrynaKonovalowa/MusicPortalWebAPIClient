@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MusicPortalWebAPI.Models;
+using MusicPortalWebAPIClient.Models;
 
 
 
-namespace MusicPortalWebAPI.Repositories
+namespace MusicPortalWebAPIClient.Repositories
 {
     public class UserRepository : IRepository<User>
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 
-namespace MusicPortalWebAPI.Repositories
+namespace MusicPortalWebAPIClient.Repositories
 {
     public interface IRepository<T> where T : class 
     {
