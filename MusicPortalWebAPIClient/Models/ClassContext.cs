@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 
-namespace MusicPortalWebAPI.Models
+namespace MusicPortalWebAPIClient.Models
 {
     public class ClassContext : DbContext
     {

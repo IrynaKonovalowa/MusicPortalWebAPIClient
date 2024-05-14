@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MusicPortalWebAPI.Models
+namespace MusicPortalWebAPIClient.Models
 {
     public class User
     {
